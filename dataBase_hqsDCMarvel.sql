@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS marvel_data(
     firstyear text
 );
 
-# Carga de dados para as tabelas - No prompt de comando: mysql -u [user name] -p [password]; / SET GLOBAL local_infile=true; / exit;/ mysql --local-infile=1 -u [user name] -p [password];
+# Carga de dados para as tabelas - No prompt de comando: mysql -u [user] -p [password]; / SET GLOBAL local_infile=true; / exit;/ mysql --local-infile=1 -u [user] -p [password];
 
 LOAD DATA LOCAL INFILE '/Users/username/.../dados/dc-wikia-data.csv' 
 INTO TABLE `bd_dmhqs`.`dc_data` CHARACTER SET UTF8 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
@@ -150,7 +150,7 @@ FROM dc_data
 UNION
 SELECT pageid, nameid, identity, align, eye, hair, sex, gsm, alive, appearances, firstappearance, company
 FROM marvel_data
-INTO OUTFILE 'secure_file_priv-directory/comic_data.csv'
+INTO OUTFILE '/Users/username/.../dados/comic_data.csv' # Necessário alterar o valor da variável global secure-file-priv para ""
 FIELDS ENCLOSED BY '"' 
 TERMINATED BY ',' 
 ESCAPED BY '"' 
