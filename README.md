@@ -1,10 +1,10 @@
 ## Fonte dos dados 
 
-Os dados originais foram obtidos das enciclopédias públicas dos personagens de histórias em quadrinhos [DC Wikia](https://dc.fandom.com/wiki/DC_Comics_Database) e [Marvel Wikia](https://marvel.fandom.com/wiki/Marvel_Database). A extração desses dados foi realizada pelo usuário da plataforma **Kaggle** AMAN CHAUHAN, que os disponibilizou para download por meio do link [FiveThirtyEight Comic Characters Dataset](https://www.kaggle.com/datasets/whenamancodes/greatest-comic-book-characters).
+Os dados originais foram obtidos das maiores enciclopédias públicas dos personagens de histórias em quadrinhos [DC Wikia](https://dc.fandom.com/wiki/DC_Comics_Database) e [Marvel Wikia](https://marvel.fandom.com/wiki/Marvel_Database). A extração desses dados foi realizada pelo usuário da plataforma **Kaggle** AMAN CHAUHAN, que os disponibilizou para download por meio do link [FiveThirtyEight Comic Characters Dataset](https://www.kaggle.com/datasets/whenamancodes/greatest-comic-book-characters).
 
 ## Carga dos dados
 
-Os dados baixados da fonte nos arquivos do diretório de dados "dc-wikia-data.csv" (6896 x 13) e "marvel-wikia-data.csv" (16376 x 13) foram carregados integralmente no MySQL Workbench e tratados por meio do script "dataBase_hqsDCMarvel.sql". Após os tratamentos realizados, o arquivo "comic_data.csv" (23272 x 12) foi exportado do MySQL.
+Os dados baixados da fonte nos arquivos do diretório de dados "dc-wikia-data.csv" (6896 x 13) e "marvel-wikia-data.csv" (16376 x 13) foram carregados integralmente no MySQL Workbench e tratados por meio do script "dataBase_hqsDCMarvel.sql". Após os tratamentos iniciais realizados, o arquivo "comic_data.csv" (23272 x 12) foi exportado do MySQL.
 
 ## Pré-processamento dos dados
 
@@ -27,8 +27,13 @@ Variáveis         | Definição
 `alive`           | Status de sobrevivência do personagem (Deceased x Living)
 `appearances`     | Número de aparições do personagem nos quadrinhos
 `firstappearance` | Ano e mês da primeira aparição do personagem nos quadrinhos
-`company`         | Nome da empresa a que pertence o personagem (DC x Marvel)
+`company`         | Nome da empresa a que o personagem pertence (DC x Marvel)
 `multiverse`      | Multiverso onde o personagem existe (informação extraída do nome do personagem na fonte dos dados) 
 
-Os resultados da análise podem ser visualizados na apresentação [Personagens de Quadrinhos DC vs Marvel](https://docs.google.com/presentation/d/18TTH4GyMo73ILyN-8zn5QOnBaAqFbM2_2G6_K6FJvB8).
+Os resultados da análise podem ser visualizados na apresentação a seguir:
+
+- Link: [https://qr.page/g/Hi7APhdYVq](https://docs.google.com/presentation/d/18TTH4GyMo73ILyN-8zn5QOnBaAqFbM2_2G6_K6FJvB8)
+- QR Code:
+
+![https://qr.page/g/Hi7APhdYVq](https://user-images.githubusercontent.com/90117229/218103648-39566707-e267-4e20-b6eb-dfff8aed850f.png)
 
